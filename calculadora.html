@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <title>Document</title>
+</head>
+<body>
+ <header>
+    <div class="container2">
+        <img src="pngs/lotus.jpeg" alt="Lótus Branca" width="150">
+    <h1>Lótus Branca</h1>
+    </div>
+     <nav>
+          
+        <ul>
+        
+          <li class="ativo"><a href="index.html">PÁGINA INICIAL</a></li>
+          <li><a href="editorial.html">EDITORIAL</a></li>
+          <li><a href="leis.html">LEIS</a></li>
+          <li><a href="aplicacao.html">APLICAÇÃO NO DIA-A-DIA</a></li>
+          <li><a href="calculadora.html">CALCULADORA</a></li>
+          <li><a href="maquina.html">MÁQUINAS</a></li>
+          <li><a href="referencias.html">REFERÊNCIAS</a></li>
+        
+        </ul>
+      
+    </nav>
+ </header>
+   
+     <center>
+    <div class="box-cards">
+        
+        <div class="card">
+          
+          <h1 class="title">Rendimento</h1>
+          <div class="container">
+            <input type="number" id="x" placeholder="Primeiro Valor">
+            <input type="number" id="y" placeholder="Segundo Valor">
+            <input type="number" id="z" placeholder="Resultado" readonly>
+            <button type="button" onclick="subtrair()">Resultado</button>
+        </div>
+        </div>
+        
+        <div class="card">
+          <h1 class="title">Energia</h1>
+          <div class="container">
+            <input type="number" id="a" placeholder="Primeiro Valor">
+            <input type="number" id="b" placeholder="Segundo Valor">
+            <input type="number" id="c" placeholder="Resultado" readonly>
+            <button type="button" onclick="dividir()">Resultado</button>
+        </div>
+        </div>
+        
+        <div class="card">
+          <h1 class="title">Trabalho</h1>
+          <div class="container">
+            <input type="number" id="d" placeholder="Primeiro Valor">
+            <input type="number" id="e" placeholder="Segundo Valor">
+            <input type="number" id="f" placeholder="Resultado" readonly>
+            <button type="button" onclick="dividir1()">Resultado</button>
+        </div>
+        </div>
+         <br><br>
+        <div class="card">
+        <h1 class="title">Calor</h1>
+        <div class="container">
+            <input type="number" id="g" placeholder="Primeiro Valor">
+            <input type="number" id="h" placeholder="Segundo Valor">
+            <input type="number" id="i" placeholder="Resultado" readonly>
+            <button type="button" onclick="somar()">Resultado</button>
+        </div>
+
+
+
+
+
+    </div><!--Box Card-->
+    <br><br>
+    <footer>
+    <ul>
+        <p>SESI / SENAI</p>
+        <p>SC-401, 3730 - Saco Grande, Florianópolis - SC</p>
+        <p>CEP 88032-005</p>
+    </ul>
+</footer>
+   </center>
+   <script> 
+    const subtrair = function(){
+        let x = document.getElementById('x').value
+        let y = document.getElementById('y').value
+        z = parseFloat(x) - parseFloat(y)
+        document.getElementById('z').value = z
+    console.log(z)
+    }
+    const dividir = function(){
+        let a = document.getElementById('a').value
+        let b = document.getElementById('b').value
+        c = parseFloat(a) / parseFloat(b)
+        document.getElementById('c').value = c
+    console.log(c)
+    }
+    const dividir1 = function(){
+        let d = document.getElementById('d').value
+        let e = document.getElementById('e').value
+        f = parseFloat(d) / parseFloat(e)
+        document.getElementById('f').value = f
+    console.log(f)
+    }
+    const somar = function(){
+        let g = document.getElementById('g').value
+        let h = document.getElementById('h').value
+        i = parseFloat(g) + parseFloat(h)
+        document.getElementById('i').value = i
+    console.log(i)
+    }
+    
+</script>
+
+</body>
+</html>
